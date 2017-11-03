@@ -159,6 +159,12 @@
   -ms-justify-content: space-between;
   -ms-flex-pack: justify;
 }
+.around {
+  justify-content: space-around;
+  -webkit-justify-content: space-around;
+  -moz-justify-content: space-around;
+  -ms-justify-content: space-around;
+}
 
 .center {
   align-items: center;

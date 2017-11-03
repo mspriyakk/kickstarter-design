@@ -18,7 +18,11 @@ figure {
 	margin: 1em -20px;
 }
 img,video {
-	max-width: 100%;
+    display: block;
+    max-width: 100%;
+}
+video, figure img {
+    margin: 0 auto;	
 }
 nav ul {
 	padding: 0px;
@@ -34,11 +38,20 @@ nav li {
 .mwrap {
 	flex-wrap: wrap;
 }
+
 .pad1 {
 	padding: 20px 20px 0;
 }
-
+.pad2 {
+	padding: 30px 0 15px;
+}
+.pad3 {
+	padding: 20px 20px 60px;
+}
 .bg-grey1 {
+    background-color: #F7F7F9;
+}
+.bg-grey2 {
     background-color: #FBFBFA;
 }
 .border1 {
@@ -47,8 +60,12 @@ nav li {
 }
 .border2 {
     border-top: 1px solid #F1EEEA;
-    border-bottom: 1px solid #F1EEEA;	
 }
+.border3 {
+    border-top: 1px solid #222;
+}
+
+
 /********************************************/
 /*     MAIN NAVIGATION                      */
 /********************************************/
@@ -57,7 +74,7 @@ nav li {
 	font-size: 0.875em;
 }
 #main-nav ul:nth-of-type(1) {	
-	margin: 0 50px 0 20px;
+	margin: 0 20px 0 20px;
 }
 #main-nav ul:nth-of-type(2) {	
 	flex: 2 1 auto;
@@ -93,35 +110,61 @@ nav li {
 	margin-right: 7px;
 }
 
-
+@media (min-width: 360px){
+	#main-nav ul:nth-of-type(1) {
+	    margin-right: 50px;
+	}	
+}
+@media (min-width: 568px){
+	#main-nav ul:nth-of-type(1) li:last-of-type {
+		display: list-item;
+	}
+}
 @media (min-width: 768px){
 	.mhide {
 		display: inherit;
-	}
+	}	
 	.container {
-		max-width: 1200px;
+		max-width: 1024px;
 		margin-left: auto;
 		margin-right: auto;
+    	box-sizing: border-box;		
 	}
+	.subheading {
+		margin: 40px 0 2em;
+		background: url("../image/line.jpg") repeat-x;
+	}	
 	#main-nav {
 		box-shadow: 0px 0px 5px 2px #aaa;
+    	border-bottom: 1px solid #ddd;
+    }	
+	#main-nav .svg--ksr-logo {
+	    width: 165px;
 	}	
 	#main-nav ul:nth-of-type(1),#main-nav ul:nth-of-type(2)  {
 		flex: 1 1 0px;
 		margin: 0;
 	}	
+	#main-nav ul:nth-of-type(1)  {
+		margin-left: 15px
+	}	
+	#main-nav ul:nth-of-type(2)  {
+		justify-content: flex-end;
+	}
 	#main-nav ul:nth-of-type(2) li {
-		margin: 0 24px;
+		margin: 0 15px;
 	}	
 
 	#main-nav li {
 		padding: 25px 0;
 	}
 	#main-nav h1 {
-		margin:  0 0.5rem;
-		flex: 1 1 0px;
+		flex: 0 0 auto;
+		width: auto;
 		text-align: center;
 		border: none;
+		margin:0 20px;
+		padding: 0;
 	}
 	#main-nav ul:nth-of-type(1){
 		order: -1;
@@ -131,17 +174,28 @@ nav li {
 	  -ms-flex-order: -1;	
 	}
 }
-
+@media (min-width: 854px){
+	#main-nav h1 {
+		flex: 1 1 0px;	
+	}
+	#main-nav .svg--ksr-logo {
+	    width: 185px;
+	}	
+}
 /********************************************/
 /*       PROJECT INTRO CONTENT              */
 /********************************************/
-
+#intro-content a {
+	color: #626369;
+	font-weight: bold;
+}
 #project-by img {
 	max-width:  25px;
 	margin-right:  10px;
 }
 #cta1 {
 	margin: 2em 0;
+    max-width: 460px;	
 }
 #cta1 button {
 	box-sizing: content-box;
@@ -167,11 +221,18 @@ nav li {
 /********************************************/
 /*       PROJECT MAIN CONTENT               */
 /********************************************/
+#main-content {
+	background-color: #fff;
+}
+#main-content a {
+	color: #2B60FF;	
+	font-weight: bold;
+}
 #subnav {
 	overflow: hidden;
 }
 #subnav ul {
-    overflow: scroll;	
+    overflow: auto;	
     border-bottom: 1px solid #F1EEEA;    
 }
 #subnav a {
@@ -199,6 +260,20 @@ footer {
 	font-size:  0.75rem;
 	line-height: 1.5;
 	background-color: #000;
+	position: relative;
+}
+footer::before {
+	content: ' ';
+	width: 24px;
+	height:18px;
+    background-image: url("../image/icons/sprite.png");
+    background-repeat: no-repeat;
+    background-position: -20px -100px;    
+    display: inline-block;
+    overflow: hidden;
+	left: -2px;
+    position: absolute;
+    top: -9px;    
 }
 footer li  {
 	margin-bottom:  0.2rem;
@@ -208,4 +283,40 @@ footer h3 {
 }
 footer a {
 	color: #E6E7E8;
+}
+footer .svg--ksr-logo {
+	max-width: 175px;
+}
+footer .svg-fill--kick {
+	fill: #fff;
+}
+footer > div:last-of-type {
+	margin-top: 40px;
+    color: #95959E;	
+}
+footer .flexbox > .mwrap.justify:nth-of-type(1) {
+    margin-right: 40px;	
+}	
+.mwrap #discover ul {
+	width: 100%;
+}
+@media (min-width: 732px){
+	footer .flexbox > .mwrap.justify:nth-of-type(1) {
+	    width: 46%;	
+	}	
+	footer .flexbox > .mwrap.justify:nth-of-type(2) {
+	    width: 48%;	
+	}	
+	#discover {
+		width: 50%;
+	}	
+	.mwrap #discover ul {
+	    width: auto;
+	}	
+}
+@media (min-width: 960px){
+	footer .flexbox > .mwrap.justify:nth-of-type(1) {
+	    width: 40%;	
+	}	
+
 }
