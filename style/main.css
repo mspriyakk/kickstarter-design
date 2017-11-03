@@ -91,7 +91,7 @@ nav li {
 	width: 100%;
 	border-bottom: 1px solid #eee;
 }
-#main-nav .svg--ksr-logo {
+#main-nav .logo {
 	width: 175px;
 }
 #compass, .svg-fill--starter {
@@ -138,7 +138,7 @@ nav li {
 		box-shadow: 0px 0px 5px 2px #aaa;
     	border-bottom: 1px solid #ddd;
     }	
-	#main-nav .svg--ksr-logo {
+	#main-nav .logo {
 	    width: 165px;
 	}	
 	#main-nav ul:nth-of-type(1),#main-nav ul:nth-of-type(2)  {
@@ -178,7 +178,7 @@ nav li {
 	#main-nav h1 {
 		flex: 1 1 0px;	
 	}
-	#main-nav .svg--ksr-logo {
+	#main-nav .logo {
 	    width: 185px;
 	}	
 }
@@ -284,7 +284,7 @@ footer h3 {
 footer a {
 	color: #E6E7E8;
 }
-footer .svg--ksr-logo {
+footer .logo {
 	max-width: 175px;
 }
 footer .svg-fill--kick {
