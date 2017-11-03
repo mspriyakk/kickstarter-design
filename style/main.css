@@ -1,6 +1,10 @@
+/********************************************/
+/*        GLOBAL NAVIGATION                 */
+/********************************************/
 body {
 	font-family: Verdana, Helvetica, Arial, sans-serif;
 	color: #353535;
+	min-width: 320px;
 }
 h2 {
 	font-size: 1.3125rem;
@@ -24,6 +28,10 @@ img,video {
 video, figure img {
     margin: 0 auto;	
 }
+video {
+	width: 100%;
+	max-width: 1024px;
+}
 nav ul {
 	padding: 0px;
 	margin: 0px;
@@ -35,9 +43,7 @@ nav li {
 .mhide {
 	display: none;
 }
-.mwrap {
-	flex-wrap: wrap;
-}
+
 
 .pad1 {
 	padding: 20px 20px 0;
@@ -80,10 +86,10 @@ nav li {
 	flex: 2 1 auto;
 	margin-right: 20px;
 }
-
 #main-nav li {
 	padding: 15px 0;
 }
+
 #main-nav h1{
 	text-align: center;
 	margin:  0.25rem 0 0;
@@ -91,23 +97,26 @@ nav li {
 	width: 100%;
 	border-bottom: 1px solid #eee;
 }
-#main-nav .logo {
-	width: 175px;
-}
-#compass, .svg-fill--starter {
-	fill: #2BDE73;
-}
 #main-nav a {
 	line-height: 1.125rem;
 	color: #353535;
 	text-decoration: none;
 }
-#main-nav svg {
+
+#main-nav object {
 	width: 1.125rem;
 }
-#main-nav #compass {
+#main-nav object.logo {
+	width: 175px;
+}
+#main-nav object:nth-of-type(1) {
+	margin-right: 7px;	
+}
+#compass {
 	fill: #05AF3C;
-	margin-right: 7px;
+}
+.svg-fill--starter {
+	fill: #2BDE73;
 }
 
 @media (min-width: 360px){
@@ -134,30 +143,11 @@ nav li {
 		margin: 40px 0 2em;
 		background: url("../image/line.jpg") repeat-x;
 	}	
+
 	#main-nav {
 		box-shadow: 0px 0px 5px 2px #aaa;
     	border-bottom: 1px solid #ddd;
     }	
-	#main-nav .logo {
-	    width: 165px;
-	}	
-	#main-nav ul:nth-of-type(1),#main-nav ul:nth-of-type(2)  {
-		flex: 1 1 0px;
-		margin: 0;
-	}	
-	#main-nav ul:nth-of-type(1)  {
-		margin-left: 15px
-	}	
-	#main-nav ul:nth-of-type(2)  {
-		justify-content: flex-end;
-	}
-	#main-nav ul:nth-of-type(2) li {
-		margin: 0 15px;
-	}	
-
-	#main-nav li {
-		padding: 25px 0;
-	}
 	#main-nav h1 {
 		flex: 0 0 auto;
 		width: auto;
@@ -166,13 +156,32 @@ nav li {
 		margin:0 20px;
 		padding: 0;
 	}
-	#main-nav ul:nth-of-type(1){
+	#main-nav .logo {
+	    width: 165px;
+	}	
+
+	#main-nav li {
+		padding: 25px 0;
+	}	
+	#main-nav ul:nth-of-type(1),
+	#main-nav ul:nth-of-type(2)  {
+		flex: 1 1 0px;
+		margin: 0;
+	}	
+	#main-nav ul:nth-of-type(1)  {
+		margin-left: 15px;
 		order: -1;
-	  -webkit-box-ordinal-group: -1;
-	  -webkit-order: -1;
-	  -moz-box-ordinal-group: -1;
-	  -ms-flex-order: -1;	
+		-webkit-box-ordinal-group: -1;
+		-webkit-order: -1;
+		-moz-box-ordinal-group: -1;
+		-ms-flex-order: -1;			
+	}	
+	#main-nav ul:nth-of-type(2)  {
+		justify-content: flex-end;
 	}
+	#main-nav ul:nth-of-type(2) li {
+		margin: 0 15px;
+	}	
 }
 @media (min-width: 854px){
 	#main-nav h1 {
@@ -182,6 +191,7 @@ nav li {
 	    width: 185px;
 	}	
 }
+
 /********************************************/
 /*       PROJECT INTRO CONTENT              */
 /********************************************/
@@ -207,15 +217,18 @@ nav li {
 	box-shadow: 1px 1px 3px 1px #ccc;
 	line-height: 42px;
 }
-#cta1  svg {
+#cta1 object {
 	width: 1rem;
-	fill: #656868;
 }
-
-#cta1 button svg {
-	fill: currentColor;
-	width: 0.8rem;
-	margin-right: 5px;
+#cta1 button object:nth-of-type(1){
+	width: 0.85rem;
+	margin-right: 5px;	
+}
+#heart {
+	fill: #353535;
+}
+#facebook, #twitter, #mail, #embed {
+	fill: #656868;	
 }
 
 /********************************************/
@@ -287,7 +300,7 @@ footer a {
 footer .logo {
 	max-width: 175px;
 }
-footer .svg-fill--kick {
+.svg--ksr-logo2 .svg-fill--kick {
 	fill: #fff;
 }
 footer > div:last-of-type {
@@ -300,6 +313,7 @@ footer .flexbox > .mwrap.justify:nth-of-type(1) {
 .mwrap #discover ul {
 	width: 100%;
 }
+
 @media (min-width: 732px){
 	footer .flexbox > .mwrap.justify:nth-of-type(1) {
 	    width: 46%;	
@@ -318,5 +332,4 @@ footer .flexbox > .mwrap.justify:nth-of-type(1) {
 	footer .flexbox > .mwrap.justify:nth-of-type(1) {
 	    width: 40%;	
 	}	
-
 }

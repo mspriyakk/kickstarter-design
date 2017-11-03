@@ -9,6 +9,10 @@
   display: -ms-flexbox;
 }
 
+.mwrap {
+  flex-wrap: wrap;
+}
+
 .column {
   flex-direction: column;
   -webkit-flex-direction: column;

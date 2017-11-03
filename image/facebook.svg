@@ -1,0 +1,5 @@
+<?xml-stylesheet type="text/css" href="../style/main.css" ?>
+<svg viewBox="0 0 17 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<title>Facebook logo</title>
+<path id="facebook" d="M15.37 0H.9C.402 0 0 .395 0 .883v14.234c0 .488.402.883.898.883H8.69V9.804H6.57V7.39h2.12V5.607c0-2.066 1.283-3.19 3.158-3.19.898 0 1.67.064 1.894.094v2.16h-1.3c-1.02 0-1.217.476-1.217 1.176v1.54h2.432l-.317 2.416h-2.115V16h4.146c.497 0 .9-.395.9-.883V.883c0-.488-.403-.883-.9-.883" fill-rule="evenodd"></path>
+</svg>
