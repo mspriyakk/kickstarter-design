@@ -191,3 +191,21 @@ nav li {
     border-bottom-color: #2BDE73;
 }
 
+/********************************************/
+/*       	  FOOTER                        */
+/********************************************/
+footer {
+	color: #E6E7E8;
+	font-size:  0.75rem;
+	line-height: 1.5;
+	background-color: #000;
+}
+footer li  {
+	margin-bottom:  0.2rem;
+}
+footer h3 {
+	margin-bottom:  0.5rem;
+}
+footer a {
+	color: #E6E7E8;
+}
